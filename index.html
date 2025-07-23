@@ -2,17 +2,89 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<!-- =========  SECCIÓN HERO  ========= -->
+<section class="hero">
+  <h1 class="hero__title">Blog de Ciberseguridad</h1>
+  <p class="hero__tagline">
+    Cuaderno de bitácora de unkwn0wn
+  </p>
+</section>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<!-- =========  POST DESTACADO  ========= -->
+{% assign featured = site.posts | where_exp:"post","post.tags contains 'featured'" | first %}
+{% if featured %}
+<section class="featured">
+  <h2>🔍 Post destacado</h2>
+  <article>
+    <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
+    <p>{{ featured.excerpt | strip_html | truncate: 180 }}</p>
+    <a class="button" href="{{ featured.url | relative_url }}">Leer más</a>
+  </article>
+</section>
+{% endif %}
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+<!-- =========  ÚLTIMAS ENTRADAS  ========= -->
+<section class="post-list">
+  <h2>Últimas entradas</h2>
+  <div class="posts-grid">
+    {% for post in site.posts limit:9 %}
+      <article class="card">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <small>{{ post.date | date: "%d %b %Y" }}</small>
+        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <a class="read-more" href="{{ post.url | relative_url }}">➜</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+<!-- =========  CATEGORÍAS & ETIQUETAS  ========= -->
+<section class="taxonomies">
+  <div>
+    <h2>Categorías</h2>
+    <ul>
+      {% for category in site.categories %}
+        <li><a href="{{ '/categories/' | append: category[0] | relative_url }}">
+          {{ category[0] }} ({{ category[1].size }})
+        </a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div>
+    <h2>Etiquetas</h2>
+    <ul class="tag-cloud">
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+        {% assign size = tag[1].size | plus: 1 | times: 0.15 | plus: 1 %}
+        <li style="font-size: {{ size }}rem;">
+          <a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- =========  ESTILOS EMBEBIDOS  ========= -->
+<style>
+/* hero */
+.hero{margin:3rem 0;text-align:center}
+.hero__title{font-size:2.5rem;margin:0}
+.hero__tagline{font-size:1.2rem;color:#666}
+
+/* destacado */
+.featured{background:#f6f6f6;padding:1.5rem;border-radius:8px;margin:2rem 0}
+.featured h3{margin-top:.4rem}
+.button{display:inline-block;padding:.4rem .8rem;border:1px solid #333;border-radius:4px;text-decoration:none}
+
+/* rejilla de posts */
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.card{border:1px solid #eee;border-radius:6px;padding:1rem;position:relative}
+.card h3{margin-top:0}
+.read-more{position:absolute;bottom:1rem;right:1rem;text-decoration:none;font-size:1.4rem}
+
+/* taxonomías */
+.taxonomies{display:flex;gap:2rem;flex-wrap:wrap;margin:2.5rem 0}
+.taxonomies ul{list-style:none;padding:0}
+.tag-cloud li{display:inline-block;margin:.2rem}
+</style>
