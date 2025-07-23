@@ -18,7 +18,7 @@ Hola, soy **0x‑Unkwn0wn**.
 
 - Email PGP: `unkwn0wn [at] protonmail [dot] com`
 - Fingerprint: `aefbc0c25ed1df0c3e973c4e777062cd732db48f`  
-- Key: [Download](https://raw.githubusercontent.com/0x-unkwn0wn/0x-unkwn0wn.github.io/refs/heads/master/assets/pgp/publickey.unkwn0wn%40protonmail.com-aefbc0c25ed1df0c3e973c4e777062cd732db48f.asc)
+- Key: [Download](https://raw.githubusercontent.com/0x-unkwn0wn/0x-unkwn0wn.github.io/refs/heads/master/assets/pgp/publickey.unkwn0wn%40protonmail.com-aefbc0c25ed1df0c3e973c4e777062cd732db48f.asc){:download}
 
 > **Clave pública** incluida para que cualquiera pueda enviarme información cifrada.
 
