@@ -11,7 +11,7 @@ tags: [ajedrez, pensamiento lateral, TTPs, estrategia, red team, blue team]
 En ciberseguridad se habla con frecuencia de *matrices de ataque*, *kill chains*, y *tácticas, técnicas y procedimientos* (TTPs). Sin embargo, los fundamentos intelectuales que pemiten ejecutar -o contrarrestar- esas TTPs suelen pasar inadvertidos. El **ajedrez**, disciplina milenaria de estrategia y cálculo, ofrece un laboratorio perfecto para entrenar la mente en los mismos procesos cognitivos que empleamos al proteger o comprometer un sistema.
 
 En este artículo revisaremos los paralelismos más relevantes entre ambos mundos, con un enfoque especial en: 
-* **Fases operativas**: apertura, medio juego y final ↔︎ reonocimiento, explotación y pos-explotación.
+* **Fases operativas**: apertura, medio juego y final ↔︎ reconocimiento, explotación y pos-explotación.
 * **Pensamiento lateral**: aplicado a la generación de TTPs no triviales.
 * **Motivos tácticos** del tablero y su traducción directa a técnicas ofensivas y defensivas.
 * **Planificación estratégica** a largo plazo y resilencia.
@@ -76,7 +76,7 @@ La resiliencia del jugador –o de la organización– se mide por su capacidad 
 
 | Objetivo | Entrenamiento ajedrecístico | Entrenamiento ciberseguridad |
 |----------|-----------------------------|------------------------------|
-| Reconocimiento preciso | Estudio de aperturas clásicas y sus ideas estratégicas | Analisis de la superficie de ataque y discovery continuo |
+| Reconocimiento preciso | Estudio de aperturas clásicas y sus ideas estratégicas | Análisis de la superficie de ataque y discovery continuo |
 | Cálculo táctico | Resolución diaria de problemas de combinación | Laboratorio de exploits / prueba de técnicas ATT&CK |
 | Planificación | Análisis de partidas modelo de grandes maestros | Diseño de run‑books de respuesta y tabletop exercises |
 | Revisión y mejora | Anotación y autoanálisis de partidas | Post‑incident reviews e implementación de lecciones aprendidas |
