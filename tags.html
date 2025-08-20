@@ -1,0 +1,38 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <header>
+    <h1>Etiquetas</h1>
+  </header>
+
+  <ul class="tags-list">
+    {% for tag in site.tags %}
+      <li>
+        <a href="#{{ tag | first | slugify }}" class="tag-link">
+          {{ tag | first }}
+          <span class="tag-count">({{ tag | last | size }})</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="tags-content">
+    {% for tag in site.tags %}
+      <div id="{{ tag | first | slugify }}" class="tag-section">
+        <h2>{{ tag | first }}</h2>
+        <ul>
+          {% for post in tag | last %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>
