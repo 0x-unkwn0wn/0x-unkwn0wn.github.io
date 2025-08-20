@@ -1,0 +1,26 @@
+---
+layout: page
+title: Red Team
+permalink: /tags/red_team/
+---
+
+<header class="tag-header">
+  <h1>Artículos sobre Red Team</h1>
+</header>
+
+<div class="post-list-by-tag">
+  {% for post in site.tags.red_team %}
+    <article class="post">
+      <h2>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-meta">
+        <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+      </p>
+      <div class="post-excerpt">
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ post.url }}" class="read-more">Leer más</a>
+      </div>
+    </article>
+  {% endfor %}
+</div>
