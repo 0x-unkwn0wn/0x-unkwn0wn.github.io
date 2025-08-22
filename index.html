@@ -59,7 +59,12 @@ layout: default
       {% for tag in tags %}
         {% assign size = tag[1].size | plus: 1 | times: 0.15 | plus: 1 %}
         <li style="font-size: {{ size }}rem;">
-          <a href="{{ '/tags/' | append: tag[0] | downcase | replace: ' ', '_' | replace: '-', '_' | append: '/' | relative_url }}">
+          {% comment %}
+            Genera la URL de la etiqueta.
+            'slugify' es un filtro de Jekyll que maneja la conversión de forma segura y estándar.
+          {% endcomment %}
+          {% assign tag_slug = tag[0] | slugify %}
+          <a href="{{ '/tags/' | append: tag_slug | append: '/' | relative_url }}">
             {{ tag[0] }}
           </a>
         </li>
