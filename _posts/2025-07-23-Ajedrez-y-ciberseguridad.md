@@ -6,7 +6,7 @@ categories: [ciberseguridad, pensamiento]
 tags: [ajedrez, pensamiento-lateral, ttps, estrategia, red-team, blue-team]
 ---
 
-# Introducción
+## Introducción
 
 En ciberseguridad se habla con frecuencia de *matrices de ataque*, *kill chains*, y *tácticas, técnicas y procedimientos* (TTPs). Sin embargo, los fundamentos intelectuales que pemiten ejecutar -o contrarrestar- esas TTPs suelen pasar inadvertidos. El **ajedrez**, disciplina milenaria de estrategia y cálculo, ofrece un laboratorio perfecto para entrenar la mente en los mismos procesos cognitivos que empleamos al proteger o comprometer un sistema.
 
