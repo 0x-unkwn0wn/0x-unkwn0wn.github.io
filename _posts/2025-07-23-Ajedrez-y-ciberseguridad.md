@@ -3,7 +3,7 @@ layout: post
 title: "Pensamiento lateral, tácticas y estrategias: lecciones de ajedrez para la ciberseguridad"
 date: 2025-07-22
 categories: [ciberseguridad, pensamiento]
-tags: [ajedrez, pensamiento-lateral, TTPs, estrategia, red-team, blue-team]
+tags: [ajedrez, pensamiento-lateral, ttps, estrategia, red-team, blue-team]
 ---
 
 # Introducción
