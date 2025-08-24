@@ -7,7 +7,7 @@ description: "Una guía clara y accionable para empezar con Threat Hunting: hip�
 image: /assets/img/threat-hunting/cover.jpg
 ---
 
-![Threat Hunting en acción: analista revisando telemetría de endpoints y red](/assets/img/threat-hunting/cover.jpg "Threat Hunting en acción")
+![Threat Hunting en acción: analista revisando telemetría de endpoints y red](/assets/img/threat-hunting/cover.JPG "Threat Hunting en acción")
 
 La ciberseguridad ya no se trata solo de **levantar muros y esperar a que resistan**. Las organizaciones más maduras saben que tarde o temprano algún atacante conseguirá atravesar las defensas. Ahí es donde entra en juego el **Threat Hunting**, o “caza de amenazas”: una disciplina proactiva cuyo objetivo es **buscar indicios de actividad maliciosa dentro de los sistemas antes de que causen un incidente mayor**.
 
