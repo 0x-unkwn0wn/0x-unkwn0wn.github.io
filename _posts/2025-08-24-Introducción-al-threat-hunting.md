@@ -19,7 +19,6 @@ El Threat Hunting es una práctica de investigación que combina **inteligencia 
 
 > En pocas palabras: es salir a **cazar** en lugar de esperar a que salten las alarmas.
 
-![Mapa conceptual: Hipótesis → Datos → Detecciones → Mejora continua](/assets/img/threat-hunting/loop-basico.png "Bucle básico de hunting")
 
 ---
 
@@ -90,7 +89,6 @@ Registra **hipótesis, datos, consultas, evidencia y resultados**:
 **Evidencia:** host `SRV-FILE-02` realiza >5 000 consultas TXT a `*.exfil-temp[.]com`.  
 **Acción:** contener host, bloquear dominio, volcar memoria/procesos, revisar credenciales.
 
-![Ejemplo de tablero: pico anómalo de consultas DNS por host](/assets/img/threat-hunting/dns-anomalias.png "Pico anómalo de DNS")
 
 ---
 
@@ -122,11 +120,3 @@ Registra **hipótesis, datos, consultas, evidencia y resultados**:
 El Threat Hunting no es una actividad de una sola vez, sino un **proceso continuo de aprendizaje y mejora**. Empieza con hipótesis simples, mide tus resultados y documenta todo. Al final, lo importante no es cazar mucho, sino **cazar mejor cada vez**.
 
 ---
-
-> **Recursos visuales**
->
-> - `/assets/img/threat-hunting/cover.jpg` — imagen de cabecera  
-> - `/assets/img/threat-hunting/loop-basico.png` — diagrama del bucle de hunting  
-> - `/assets/img/threat-hunting/dns-anomalias.png` — gráfico de ejemplo de anomalías DNS
-
-*Coloca las imágenes en la ruta indicada dentro de tu Jekyll (`/assets/img/threat-hunting/`).*
